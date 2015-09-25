@@ -1,0 +1,44 @@
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--jquery-->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/css/flat-ui.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script>
+    $(function() {
+      if (Modernizr.mq('(min-width: 992px)')) {
+        var $sidebar   = $("#sidebar"),
+          $window    = $(window),
+          offset     = $sidebar.offset(),
+          topPadding = 15;
+
+        $window.scroll(function() {
+          if ($window.scrollTop() > offset.top) {
+            $sidebar.stop().animate({
+              marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+          } else {
+            $sidebar.stop().animate({
+              marginTop: 0
+            });
+          }
+        });
+      }
+    });
+
+    $(function() {
+      if (location.pathname.split("/")[2]) {
+        $('div.list-group a[href^="/docs/' + location.pathname.split("/")[2] + '"]').addClass('active');
+      }
+      if (location.pathname.split("/")[3]) {
+        $('ul.nav-pills li a[href^="./' + location.pathname.split("/")[3] + '"]').parent().addClass('active');
+      }
+    });
+  </script>
+</head>

@@ -1,0 +1,23 @@
+{% include head.html %}
+<body>
+<!-- Begin Body -->
+<div class="container">
+  {% include navbar.html %}
+  <!-- /navbar -->
+  <div class="row">
+    {% include sidebar.html %}
+    <div class="col-md-10">
+      <ul class="nav nav-pills">
+        <li role="presentation"><a href="./models.html">Models</a></li>
+        <li role="presentation"><a href="./configuration.html">Configuration</a></li>
+        <li role="presentation"><a href="./data-types-attributes.html">Data-Types</a></li>
+        <li role="presentation"><a href="./instance-class-methods.html">Methods</a></li>
+        <li role="presentation"><a href="./lifecycle-callbacks.html">Callbacks</a></li>
+        <li role="presentation"><a href="./validations.html">Validations</a></li>
+      </ul>
+      {{content}}
+    </div>
+  </div>
+  {% include foot.html %}
+</div>
+</body>

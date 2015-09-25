@@ -1,0 +1,21 @@
+{% include head.html %}
+<body>
+<!-- Begin Body -->
+<div class="container">
+  {% include navbar.html %}
+  <!-- /navbar -->
+  <div class="row">
+    {% include sidebar.html %}
+    <div class="col-md-10">
+      <ul class="nav nav-pills">
+        <li role="presentation"><a href="./introduction.html">Introduction</a></li>
+        <li role="presentation"><a href="./installation.html">Installation</a></li>
+        <li role="presentation"><a href="./getting-started.html">Getting Started</a></li>
+        <li role="presentation"><a href="./new-to-node.html">New to Node?</a></li>
+      </ul>
+      {{content}}
+    </div>
+  </div>
+  {% include foot.html %}
+</div>
+</body>
