@@ -23,7 +23,7 @@ return a chainable object.
 ### .find( `criteria`, [`callback`] )
 
 `find` will return an array of records that match the supplied criteria. Criteria can be built
-using the [Query Language](query-language.md).
+using the [Query Language](query-language.html).
 
 |    Description     | Accepted Data Types             | Required ? |
 |--------------------|---------------------------------|------------|
@@ -85,7 +85,7 @@ User.create({
 ### .findOrCreate( `search criteria`, [`values`, `callback`] )
 
 `findOrCreate` will return a single record if one was found or created, or an array of records if multiple get found/created via the supplied criteria or values. Criteria can be built
-using the [Query Language](query-language.md).
+using the [Query Language](query-language.html).
 
 |    Description     | Accepted Data Types             | Required ? |
 |--------------------|---------------------------------|------------|
@@ -117,7 +117,7 @@ User.findOrCreate({ name: 'Walter Jr' })
 ### .update( `search criteria` , `values` , [`callback`] )
 
 `update` will attempt to update any records matching the criteria passed in. Criteria can be built
-using the [Query Language](query-language.md).
+using the [Query Language](query-language.html).
 
 |    Description     | Accepted Data Types             | Required ? |
 |--------------------|---------------------------------|------------|
@@ -140,7 +140,7 @@ User.update({ name: 'Walter Jr' }, { name: 'Flynn' })
 ### .destroy( `criteria` , [`callback`] )
 
 `destroy` will destroy any records matching the provided criteria. Criteria can be built
-using the [Query Language](query-language.md).
+using the [Query Language](query-language.html).
 
 |    Description     | Accepted Data Types             | Required ? |
 |--------------------|---------------------------------|------------|
