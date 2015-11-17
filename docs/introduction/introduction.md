@@ -10,6 +10,6 @@ adapters to communicate with your favorite data-store.
 
 It is written entirely in Javascript and runs on Node.js.
 
-* [Installation](installation.md)
-* [Getting Started](getting-started.md)
+* [Installation](installation.html)
+* [Getting Started](getting-started.html)
 
